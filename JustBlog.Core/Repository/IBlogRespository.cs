@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JustBlog.Core
+namespace JustBlog.Core.Repository
 {
     public interface IBlogRespository
     {

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using JustBlog.Core.Repository;
+using Ninject;
+using Ninject.Web.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +13,19 @@ namespace JustBlog
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : NinjectHttpApplication
     {
+        protected override Ninject.IKernel CreateKernel()
+        {
+            var kernel = new StandardKernel();
+
+            kernel.Load(new RepositoryModule());
+            kernel.Bind<IBlogRespository>().To<BlogRepository>();
+
+            return kernel;
+        }
+
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
