@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Castle.Windsor;
+using Castle.Windsor.Installer;
+using JustBlog.Core.Plumbing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +22,23 @@ namespace JustBlog
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+
+        private static IWindsorContainer container;
+
+        private static void BootstrapContainer()
+        {
+            container = new WindsorContainer()
+                          .Install(FromAssembly.This());
+
+            var controllerFactory = new WindsorControllerFactory(container.Kernel);
+            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+
+        }
+
+        protected void Application_End()
+        {
+            container.Dispose();
         }
     }
 }
