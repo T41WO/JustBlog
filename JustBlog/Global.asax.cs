@@ -20,19 +20,16 @@ namespace JustBlog
             var kernel = new StandardKernel();
 
             kernel.Load(new RepositoryModule());
-            kernel.Bind<IBlogRespository>().To<BlogRepository>();
+            kernel.Bind<IBlogRepository>().To<BlogRepository>();
 
             return kernel;
         }
 
 
-        protected void Application_Start()
+        protected override void OnApplicationStarted()
         {
-            AreaRegistration.RegisterAllAreas();
-
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            base.OnApplicationStarted();
         }
     }
 }

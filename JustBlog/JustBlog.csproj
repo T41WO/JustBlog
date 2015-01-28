@@ -129,15 +129,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="CustomHelpers\ActionLinkExtensions.cs" />
+    <Compile Include="CustomHelpers\Extensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Themes\Simple\Images\bullet.png" />
+    <Content Include="Content\Themes\Simple\Images\content.png" />
+    <Content Include="Content\Themes\Simple\Images\footer.png" />
+    <Content Include="Content\Themes\Simple\Images\graphic.png" />
+    <Content Include="Content\Themes\Simple\Images\link.png" />
+    <Content Include="Content\Themes\Simple\Images\logo.png" />
+    <Content Include="Content\Themes\Simple\Images\menu.png" />
+    <Content Include="Content\Themes\Simple\Images\menu_select.png" />
+    <Content Include="Content\Themes\Simple\Images\search.png" />
+    <Content Include="Content\Themes\Simple\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -150,8 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -161,6 +173,24 @@
       <Project>{09062581-8b2c-4573-bb85-c3701527e0e5}</Project>
       <Name>JustBlog.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_PostTemplate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Helpers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Pager.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

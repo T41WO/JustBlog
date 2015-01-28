@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JustBlog.Core.Repository
 {
-    public interface IBlogRespository
+    public interface IBlogRepository
     {
         IList<Post> Posts(int pageNo, int pageSize);
         int TotalPosts();

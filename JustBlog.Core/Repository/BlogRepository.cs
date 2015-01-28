@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace JustBlog.Core.Repository
 {
-    public class BlogRepository: IBlogRespository
+    public class BlogRepository: IBlogRepository
     {
         private readonly ISession _session;
 

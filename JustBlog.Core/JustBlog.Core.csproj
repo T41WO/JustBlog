@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Repository\BlogRepository.cs" />
-    <Compile Include="Repository\IBlogRespository.cs" />
+    <Compile Include="Repository\IBlogRepository.cs" />
     <Compile Include="Mappings\CategoryMap.cs" />
     <Compile Include="Mappings\PostMap.cs" />
     <Compile Include="Mappings\TagMap.cs" />
