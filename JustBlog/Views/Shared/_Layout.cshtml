@@ -6,6 +6,8 @@
     <title>@ViewBag.Title</title>
 
     <link href="@Url.Content("~/Content/Themes/Simple/style.css")" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script src="@Url.Content("~/Scripts/app.js")"></script>
 </head>
 <body>
     <div id="main">
@@ -30,7 +32,12 @@
 
             <!-- Site Content -->
             <div id="site_content">
+                @Html.Partial("_Search")
+                
                 @RenderBody()
+
+                @* Call the child action to render the sidebar *@
+                @Html.Action("Sidebars")
             </div>
 
             <!-- Footer -->
