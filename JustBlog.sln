@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog", "JustBlog\JustBl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog.Core", "JustBlog.Core\JustBlog.Core.csproj", "{09062581-8B2C-4573-BB85-C3701527E0E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog.Tests", "JustBlog.Tests\JustBlog.Tests.csproj", "{5D7803FA-BDB9-4BF7-95C6-2F62E6F77D97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{09062581-8B2C-4573-BB85-C3701527E0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09062581-8B2C-4573-BB85-C3701527E0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09062581-8B2C-4573-BB85-C3701527E0E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D7803FA-BDB9-4BF7-95C6-2F62E6F77D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7803FA-BDB9-4BF7-95C6-2F62E6F77D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7803FA-BDB9-4BF7-95C6-2F62E6F77D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7803FA-BDB9-4BF7-95C6-2F62E6F77D97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
