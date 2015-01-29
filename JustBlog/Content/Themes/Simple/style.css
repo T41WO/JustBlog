@@ -193,10 +193,13 @@ ul#menu li a:hover
 { text-align: center; }
 
 #sidebars
-{ float: right; }
+{ float: right; 
+  clear: both;
+}
 
 .sidebar
-{ width: 200px;
+{ /*float: right;*/
+  width: 200px;
   padding: 0 15px 20px 15px; }
  
 .sidebar h3

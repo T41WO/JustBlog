@@ -20,30 +20,31 @@
                     <h2>Writings, Experiments and More...</h2>
                 </div>
             </div>
+        </div>
 
-            <!--Navigation-->
-            <div id="menubar">
-                <ul id="menu">
-                    <li>@Html.ActionLink("Posts", "Posts")</li>
-                    <li>@Html.ActionLink("Contact", "Contact")</li>
-                    <li>@Html.ActionLink("About Me", "AboutMe")</li>
-                </ul>
-            </div>
+        <!--Navigation-->
+        <div id="menubar">
+            <ul id="menu">
+                <li>@Html.ActionLink("Posts", "Posts")</li>
+                <li>@Html.ActionLink("Contact", "Contact")</li>
+                <li>@Html.ActionLink("About Me", "AboutMe")</li>
+            </ul>
+        </div>
 
-            <!-- Site Content -->
-            <div id="site_content">
-                @Html.Partial("_Search")
-                
-                @RenderBody()
+        <!-- Site Content -->
+        <div id="site_content">
+            @Html.Partial("_Search")
+            @* Call the child action to render the sidebar *@
+            @Html.Action("Sidebars")
 
-                @* Call the child action to render the sidebar *@
-                @Html.Action("Sidebars")
-            </div>
+            @RenderBody()
 
-            <!-- Footer -->
-            <div id="footer">
-                Copyright © @DateTime.Now.Year JustBlog All Rights Reserved
-            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            Copyright © @DateTime.Now.Year JustBlog All Rights Reserved
         </div>
     </div>
 </body>
