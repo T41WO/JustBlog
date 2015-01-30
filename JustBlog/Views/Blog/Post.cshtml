@@ -23,10 +23,15 @@
           <span>Tags:</span> @Helpers.Tags(Html, Model.Tags)
         </div>
          
+        <!-- DISPLAY THE COMMENTS COUNT -->
+        <div class="no-of-comments">
+          <a href="@string.Format("{0}/#disqus_thread", Model.Href(Url) )"></a>
+        </div>
+
         <div class="posted-date">
           @Model.PostedOn.ToConfigLocalTime()
         </div>
-         
+                  
       </div>
     </div>
      
@@ -34,5 +39,6 @@
      @Html.Raw(Model.Description)
     </div>
      
+    @Html.Partial("_Disqus")
   </div>
 </div>
