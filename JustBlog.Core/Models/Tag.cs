@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace JustBlog.Core.Models
         public virtual string Name { get; set; }
         public virtual string UrlSlug { get; set; }
         public virtual string Description { get; set; }
+
+        [JsonIgnore]
         public virtual IList<Post> Posts { get; set; }
     }
 }

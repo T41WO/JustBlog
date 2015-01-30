@@ -1,4 +1,6 @@
-﻿using JustBlog.Core.Repository;
+﻿using JustBlog.Core.Models;
+using JustBlog.Core.Repository;
+using JustBlog.ModelBinder;
 using JustBlog.Providers;
 using Ninject;
 using Ninject.Web.Common;
@@ -32,6 +34,7 @@ namespace JustBlog
         {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             base.OnApplicationStarted();
+            ModelBinders.Binders.Add(typeof(Post), new PostModelBinder(Kernel));
         }
     }
 }
